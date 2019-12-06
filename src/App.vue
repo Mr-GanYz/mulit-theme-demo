@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" :class="themeName">
+    <theme-picker />
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
@@ -7,11 +8,17 @@
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+import { mapGetters } from "vuex";
+import ThemePicker from "@/components/theme-picker.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    HelloWorld,
+    ThemePicker
+  },
+  computed: {
+    ...mapGetters(["themeName"])
   }
 };
 </script>

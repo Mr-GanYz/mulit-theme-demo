@@ -1,0 +1,36 @@
+@mixin theme-mixin($background, $color) {
+  background-color: $background;
+  color: $color;
+  a {
+    color: $color;
+  }
+}
+
+// theme-green
+$background: #42b983;
+$color: #fff;
+
+.theme-green {
+  @include theme-mixin($background, $color);
+}
+
+// theme-black-gray
+$background: #6d6d6d;
+
+.theme-black-gray {
+  @include theme-mixin($background, $color);
+}
+
+// .theme-black-gloden
+$background: #1d1e23;
+
+.theme-black-gloden {
+  @include theme-mixin($background, $color);
+}
+
+// theme-tap
+$background: #00b9c8;
+
+.theme-tap {
+  @include theme-mixin($background, $color);
+}
